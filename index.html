@@ -33,7 +33,7 @@
   "downloadUrl": "https://apps.apple.com/app/id6773161967"
 }
 </script>
-<link rel="stylesheet" href="/marklift-website/css/style.css?v=20260606">
+<link rel="stylesheet" href="/marklift-website/css/style.css?v=20260607">
 </head>
 <body>
 <header class="hero">
@@ -57,16 +57,29 @@
   your device. Nothing is uploaded.</p>
 
   <section class="demo">
-    <video controls muted playsinline preload="metadata"
-           poster="/marklift-website/img/preview-poster.png?v=4">
-      <source src="/marklift-website/img/marklift-preview.mp4?v=4" type="video/mp4">
-    </video>
+    <!-- App preview in an iPhone frame, autoplaying muted + looping with no
+         controls so it reads as a live device. -->
+    <div class="device hero-device">
+      <div class="screen">
+        <video autoplay loop muted playsinline preload="auto"
+               poster="/marklift-website/img/preview-poster.png?v=4"
+               aria-label="MarkLift app preview video">
+          <source src="/marklift-website/img/marklift-preview.mp4?v=4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </section>
 
   <section class="shots" aria-label="Screenshots">
-    <img src="/marklift-website/img/shot-home.png" alt="MarkLift home screen with conversion options" loading="lazy">
-    <img src="/marklift-website/img/shot-result.png" alt="A converted document shown as clean markdown" loading="lazy">
-    <img src="/marklift-website/img/shot-onboarding.png" alt="MarkLift welcome screen" loading="lazy">
+    <div class="device"><div class="screen">
+      <img src="/marklift-website/img/shot-home.png" alt="MarkLift home screen with conversion options" loading="lazy">
+    </div></div>
+    <div class="device"><div class="screen">
+      <img src="/marklift-website/img/shot-result.png" alt="A converted document shown as clean markdown" loading="lazy">
+    </div></div>
+    <div class="device"><div class="screen">
+      <img src="/marklift-website/img/shot-onboarding.png" alt="MarkLift welcome screen" loading="lazy">
+    </div></div>
   </section>
 
   <h2>What it does</h2>
