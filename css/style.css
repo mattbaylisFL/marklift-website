@@ -9,7 +9,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; }
 
 body {
@@ -25,40 +24,80 @@ a:hover { text-decoration: underline; }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
+/* Compact hero: icon + text side by side, sized to its content */
 header.hero {
   background: linear-gradient(135deg, var(--orange), var(--ember));
   color: #fff;
-  text-align: center;
-  padding: 72px 24px 64px;
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 26px 24px;
 }
 header.hero img.icon {
-  width: 104px; height: 104px; border-radius: 23px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  width: 72px; height: 72px; border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  flex: 0 0 auto;
 }
-header.hero h1 { font-size: 40px; margin: 20px 0 6px; font-weight: 800; letter-spacing: -0.02em; }
-header.hero p.tag { font-size: 19px; margin: 0 0 24px; opacity: 0.95; }
+.hero-text h1 { font-size: 30px; margin: 0 0 2px; font-weight: 800; letter-spacing: -0.02em; }
+.hero-text p.tag { font-size: 16px; margin: 0 0 12px; opacity: 0.95; }
 
-.badge img { height: 54px; width: auto; }
+/* Official App Store badge — white variant reads well on the orange gradient */
+.app-store-badge { display: inline-block; line-height: 0; transition: opacity .15s; }
+.app-store-badge:hover { opacity: 0.88; text-decoration: none; }
+.app-store-badge img { height: 46px; width: auto; display: block; }
+.app-store-badge .badge-light { display: none; }
+.app-store-badge .badge-dark { display: block; }
 
-main { padding: 56px 0; }
-h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; margin-top: 48px; }
-h3 { font-size: 19px; font-weight: 600; margin-top: 28px; }
+main { padding: 20px 0 48px; }
+.lede { font-size: 18px; margin: 16px 0 0; }
+h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; margin-top: 44px; }
+h3 { font-size: 18px; font-weight: 600; margin-top: 24px; }
 
-.features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+/* Preview video */
+.demo { margin: 30px 0 6px; text-align: center; }
+.demo video {
+  width: 240px; max-width: 70vw;
+  border-radius: 30px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.20);
+  background: #000;
+  display: inline-block;
+}
+
+/* Screenshot gallery — row on desktop, swipe on mobile */
+.shots {
+  display: flex;
+  gap: 16px;
+  margin: 18px 0 0;
+  padding-bottom: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+}
+.shots img {
+  width: 200px; flex: 0 0 auto;
+  border-radius: 22px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+  scroll-snap-align: center;
+}
+
+.features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
 .feature { background: #fff; border: 1px solid #ECEAE4; border-radius: 16px; padding: 22px; }
 .feature h3 { margin-top: 0; }
 .feature p { margin: 6px 0 0; color: #3a3f45; }
 
 .muted { color: var(--subtle); font-size: 14px; }
 
-article.legal { padding: 56px 0; }
-article.legal h1 { font-size: 32px; letter-spacing: -0.02em; }
+article.legal { padding: 40px 0; }
+article.legal h1 { font-size: 30px; letter-spacing: -0.02em; }
 article.legal h2 { font-size: 20px; }
 article.legal p, article.legal li { color: #2a2f35; }
 
 footer {
   border-top: 1px solid #ECEAE4;
-  padding: 36px 0;
+  padding: 32px 0;
   text-align: center;
   color: var(--subtle);
   font-size: 14px;
@@ -67,7 +106,13 @@ footer a { color: var(--subtle); }
 
 @media (max-width: 640px) {
   .features { grid-template-columns: 1fr; }
-  header.hero h1 { font-size: 32px; }
+  /* Stack the hero so the title sits under the icon, centered */
+  .hero-inner { flex-direction: column; text-align: center; gap: 12px; padding: 28px 24px 30px; }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p.tag { font-size: 15px; }
+  header.hero img.icon { width: 72px; height: 72px; }
+  .app-store-badge { margin: 0 auto; }
+  .shots { justify-content: flex-start; }
 }
 
 @media (prefers-color-scheme: dark) {
