@@ -2,12 +2,12 @@
   "name": "MarkLift",
   "short_name": "MarkLift",
   "description": "Convert any document to clean markdown on your iPhone, on-device.",
-  "start_url": "/",
+  "start_url": "/marklift-website/",
   "display": "browser",
   "theme_color": "#FF7A45",
   "background_color": "#FAFAF7",
   "icons": [
-    { "src": "/img/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/img/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+    { "src": "/marklift-website/img/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/marklift-website/img/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
   ]
 }

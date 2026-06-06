@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://marklift.app/sitemap.xml
+Sitemap: https://mattbaylisfl.github.io/marklift-website/sitemap.xml
