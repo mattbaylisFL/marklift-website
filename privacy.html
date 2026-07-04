@@ -6,21 +6,55 @@
 <title>Privacy Policy — MarkLift</title>
 <meta name="description" content="MarkLift processes everything on your device. Nothing is uploaded. We don't have servers and we don't collect data.">
 <meta name="theme-color" content="#FF7A45">
-<link rel="canonical" href="https://mattbaylisfl.github.io/marklift-website/privacy.html">
+<link rel="canonical" href="https://embay.dev/marklift/privacy">
 <link rel="icon" type="image/png" sizes="32x32" href="/marklift-website/img/favicon-32.png">
 <link rel="stylesheet" href="/marklift-website/css/style.css?v=20260607">
+<style>
+  /* GDPR-detail sections: expanded by default (safe/complete), collapsed
+     automatically for visitors outside the EEA/UK/Switzerland — see script
+     near the end of the page. Page-scoped, not in the shared stylesheet. */
+  details.gdpr-extra { margin-bottom: 24px; }
+  details.gdpr-extra > summary { cursor: pointer; list-style: none; }
+  details.gdpr-extra > summary::-webkit-details-marker { display: none; }
+  details.gdpr-extra > summary::marker { content: ""; }
+  details.gdpr-extra > summary::before { content: "▾ "; opacity: .5; }
+  details.gdpr-extra:not([open]) > summary::before { content: "▸ "; }
+  details.gdpr-extra > summary h2 { display: inline; }
+</style>
 </head>
 <body>
 <article class="legal wrap">
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated 5 June 2026</p>
+  <p class="muted">Effective 5 June 2026 · Last updated 4 July 2026</p>
+
+  <p><strong>This page has moved.</strong> The current privacy policy for MarkLift is
+  maintained at <a href="https://embay.dev/marklift/privacy">embay.dev/marklift/privacy</a>.
+  This copy is kept in sync so it's accurate regardless of which link you followed.</p>
 
   <p>MarkLift is built so that your documents never leave your phone. This policy
   explains, in plain terms, what that means.</p>
 
   <h2>What we collect</h2>
-  <p>Nothing. MarkLift does not collect, transmit, or store any personal data. There
-  is no account, no sign-in, and no analytics or tracking of any kind.</p>
+  <p>MarkLift itself collects nothing: there is no account, no sign-in, and no
+  first-party analytics. The one exception is the optional rewarded ad described
+  below, which involves Google as a third party.</p>
+
+  <h2>Rewarded ads (optional)</h2>
+  <p>Free users who are over their daily conversion limit can choose to watch a
+  short rewarded ad, served by <a href="https://policies.google.com/technologies/ads" rel="noopener">Google AdMob</a>,
+  to earn one extra conversion. The Google Mobile Ads SDK is only started, and
+  Apple's App Tracking Transparency (ATT) permission only requested, the first
+  time you explicitly choose to watch an ad — if you never opt in, no ad-network
+  activity ever occurs. If you allow tracking, AdMob may use your device's
+  advertising identifier (IDFA) to personalize the ad; if you decline, the ad
+  still shows but without IDFA-based personalization. AdMob also collects
+  standard ad-delivery signals (device type, ad interactions) to serve and
+  measure the ad. This data goes directly from your device to Google and is
+  never seen by us. See <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</p>
+  <p>Legal basis (GDPR): your consent, given through the ATT prompt when you
+  choose to watch an ad (Art. 6(1)(a)). You can change your ATT choice at any
+  time in iOS Settings → Privacy &amp; Security → Tracking → MarkLift, or avoid
+  ads entirely by using the one-time unlock described below.</p>
 
   <h2>How your documents are handled</h2>
   <p>Every conversion runs entirely on your device using Apple frameworks. The files
@@ -41,17 +75,80 @@
   handles payment; we never see your payment details. Apple's handling of that
   transaction is covered by Apple's own privacy policy.</p>
 
+  <details class="gdpr-extra" open>
+  <summary><h2>Legal bases, recipients, and transfers</h2></summary>
+  <p>Where the GDPR applies: converting your documents is what is needed to
+  provide the app itself (performance of a contract, Art. 6(1)(b)), and it
+  happens entirely on your device. The rewarded ad above is served on the basis
+  of your consent (Art. 6(1)(a)), given through the ATT prompt. The two third
+  parties involved are <strong>Apple</strong> (App Store distribution and
+  StoreKit payments), acting under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's
+  privacy policy</a>, and <strong>Google</strong> (AdMob, only if you choose to
+  watch a rewarded ad), acting under
+  <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.
+  We receive no personal data ourselves, so we transfer none internationally;
+  Apple and Google process data in the United States and elsewhere under their
+  own transfer safeguards (the EU–US Data Privacy Framework and/or Standard
+  Contractual Clauses). We carry out no automated decision-making or profiling
+  within the meaning of Article 22 GDPR. We obtain no data from third-party
+  sources. Providing personal data is never required to use MarkLift.</p>
+
+  <h3>Retention</h3>
+  <p>We retain nothing ourselves, because we receive nothing. Your documents,
+  converted markdown, and history stay on your device until you delete them or
+  delete the app. Ad-delivery data collected by Google, if you choose to watch
+  a rewarded ad, is retained under Google's own policies.</p>
+
+  <h3>Your rights</h3>
+  <p>Where the GDPR or similar laws apply, you have the right to access, rectify, and
+  erase your personal data; to restrict or object to its processing; to data
+  portability; and to withdraw consent at any time. Because we hold no personal data,
+  in practice there is nothing for us to disclose, correct, or delete — but you can
+  always email <a href="mailto:support@embay.dev">support@embay.dev</a> and we will
+  respond. You also have the right to lodge a complaint with a supervisory
+  authority — in the EU/EEA your local data protection authority (see the
+  <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en" rel="noopener">EDPB
+  member list</a>); in the UK the
+  <a href="https://ico.org.uk" rel="noopener">Information Commissioner's Office</a>.</p>
+  </details>
+
   <h2>Children</h2>
-  <p>MarkLift does not collect data from anyone, including children.</p>
+  <p>MarkLift does not knowingly collect data from anyone, including children. The
+  rewarded ad is opt-in and never shown automatically, and the one-time unlock
+  removes it entirely if you'd prefer not to use it.</p>
 
   <h2>Changes</h2>
   <p>If this policy changes, the updated version will appear on this page with a new
-  date.</p>
+  date, and material changes will be flagged before taking effect.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy: <a href="mailto:support@marklift.app">support@marklift.app</a>.</p>
+  <p>MarkLift is published by Embay, LLC, a limited liability company registered
+  in Florida, United States (7901 4th St N, Ste 300, St. Petersburg, FL 33702).
+  For the purposes of the EU and UK GDPR, Embay, LLC is the data controller. We
+  have not appointed a Data Protection Officer, and given the scale and nature
+  of our processing we are not required to.</p>
+  <p>Questions about privacy: <a href="mailto:support@embay.dev">support@embay.dev</a>.</p>
 
   <p><a href="/marklift-website/">← Back to MarkLift</a></p>
 </article>
+
+<script>
+  // GDPR-detail sections default open (full disclosure) — collapse them only
+  // once we've positively confirmed the visitor is outside the EEA/UK/Switzerland.
+  // Fails open (stays expanded) if the lookup fails.
+  (function () {
+    var EEA_UK_CH = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","CH"];
+    fetch("/cdn-cgi/trace", { cache: "no-store" })
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        var m = t.match(/^loc=([A-Z]{2})/m);
+        var cc = m && m[1];
+        if (cc && EEA_UK_CH.indexOf(cc) === -1) {
+          document.querySelectorAll("details.gdpr-extra").forEach(function (d) { d.open = false; });
+        }
+      })
+      .catch(function () { /* leave expanded — safe default */ });
+  })();
+</script>
 </body>
 </html>
